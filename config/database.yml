@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: user
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: socialhub_development
+
+test:
+  <<: *default
+  database: socialhub_test
+
+production:
+  <<: *default
+  database: socialhub_production
+  username: socialhub
+  password: <%= ENV['SOCIALHUB_DATABASE_PASSWORD'] %>

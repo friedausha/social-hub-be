@@ -2,7 +2,7 @@ class AuthenticationController < ApplicationController
   def login
     @user = User.find_by(email: login_params[:email])
     if @user&.authenticate(login_params[:password])
-      token = encode_token({ user_id: @user.id })
+      token = encode_token({ user_id: @user.id, exp: 24.hours.from_now.to_i })
       render json: { token: token, user: @user }, status: :ok
     else
       render json: { error: 'Invalid email or password' }, status: :unauthorized

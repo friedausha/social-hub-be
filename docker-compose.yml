@@ -26,5 +26,20 @@ services:
       DATABASE_PASSWORD: password
       DATABASE_NAME: socialhub_development
 
+  test:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rspec"
+    volumes:
+      - .:/app
+      - ./config/master.key:/app/config/master.key
+    depends_on:
+      - db
+    environment:
+      RAILS_ENV: test
+      DATABASE_HOST: db
+      DATABASE_USER: user
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: socialhub_test
+
 volumes:
   postgres_data:

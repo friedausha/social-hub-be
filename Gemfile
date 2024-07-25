@@ -11,3 +11,14 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'rack-cors'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+end
+

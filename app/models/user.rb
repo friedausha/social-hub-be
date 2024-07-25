@@ -4,5 +4,5 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 8 }
   validates :full_name, presence: true
 
-
+  has_many :posts, dependent: :destroy
 end

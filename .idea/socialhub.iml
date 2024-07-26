@@ -384,6 +384,21 @@
               <RakeTaskImpl description="Truncate all/specified *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)" fullCommand="log:clear" id="clear" />
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl id="rswag">
+            <subtasks>
+              <RakeTaskImpl id="specs">
+                <subtasks>
+                  <RakeTaskImpl description="Generate Swagger JSON files from integration specs" fullCommand="rswag:specs:swaggerize" id="swaggerize" />
+                </subtasks>
+              </RakeTaskImpl>
+              <RakeTaskImpl id="ui">
+                <subtasks>
+                  <RakeTaskImpl description="TODO" fullCommand="rswag:ui:copy_assets[dest]" id="copy_assets[dest]" />
+                  <RakeTaskImpl description="" fullCommand="rswag:ui:copy_assets" id="copy_assets" />
+                </subtasks>
+              </RakeTaskImpl>
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="Run all specs in spec directory (excluding plugin specs)" fullCommand="spec" id="spec" />
           <RakeTaskImpl id="spec">
             <subtasks>
@@ -480,6 +495,7 @@
               </RakeTaskImpl>
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl description="" fullCommand="rswag" id="rswag" />
           <RakeTaskImpl description="" fullCommand="tmp" id="tmp" />
           <RakeTaskImpl description="" fullCommand="tmp/cache" id="tmp/cache" />
           <RakeTaskImpl description="" fullCommand="tmp/cache/assets" id="tmp/cache/assets" />

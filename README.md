@@ -1,24 +1,40 @@
-# README
+# SocialHub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+SocialHub is a social media for user to register, login, create post and
+view post without authentication. This readme covers the backend side of
+socialhub.
 
-Things you may want to cover:
+## Prerequisites
+Ensure you have the following software installed on your local machine:
 
-* Ruby version
+* Docker
+* Ruby 3.3.4 (if running outside Docker)
+* PostgreSQL 11 (if running outside Docker)
 
-* System dependencies
 
-* Configuration
+## Setup
 
-* Database creation
+Install the dependencies
+```angular2html
+bundle install
+```
 
-* Database initialization
+Build the services 
+```angular2html
+make build
+```
 
-* How to run the test suite
+Start the services
+```angular2html
+make up
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Stop the services
+```angular2html
+make down
+```
+Test
+```angular2html
+make test
+```

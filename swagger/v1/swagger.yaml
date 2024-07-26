@@ -1,0 +1,194 @@
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/login":
+    post:
+      summary: login authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                      example: "test@example.com"
+                    password:
+                      type: string
+                      example: "password"
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MjIwMzg4NzB9.PD1d8fgBnFpyRdVUyY9n3xGimB3bboX7DY0LIZrZggc"
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: number
+                        example: 1
+                      email:
+                        type: string
+                        example: "test@example.com"
+                      password_digest:
+                        type: string
+                        example: "password"
+  "/posts":
+    get:
+      summary: list posts
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 1
+                    title:
+                      type: string
+                      example: "Post Title"
+                    content:
+                      type: string
+                      example: "Post content here..."
+                    created_at:
+                      type: string
+                      format: date-time
+                      example: "2024-07-26T06:31:57+00:00"
+                    updated_at:
+                      type: string
+                      format: date-time
+                      example: "2024-07-26T06:31:57+00:00"
+    post:
+      summary: create post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: "New Post Title"
+                content:
+                  type: string
+                  example: "Content of the new post..."
+      responses:
+        '201':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  title:
+                    type: string
+                    example: "New Post Title"
+                  content:
+                    type: string
+                    example: "Content of the new post..."
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: "2024-07-26T06:31:57+00:00"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: "2024-07-26T06:31:57+00:00"
+  "/users/new":
+    get:
+      summary: new user
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "User creation form"
+  "/users/create":
+    get:
+      summary: create user
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "User created successfully"
+  "/users":
+    post:
+      summary: create user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "newuser@example.com"
+                password:
+                  type: string
+                  example: "password"
+                full_name:
+                  type: string
+                  example: "New User"
+      responses:
+        '201':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  email:
+                    type: string
+                    example: "newuser@example.com"
+                  full_name:
+                    type: string
+                    example: "New User"
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: "2024-07-26T06:31:57+00:00"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: "2024-07-26T06:31:57+00:00"
+servers:
+  - url: https://{defaultHost}
+    variables:
+      defaultHost:
+        default: www.example.com

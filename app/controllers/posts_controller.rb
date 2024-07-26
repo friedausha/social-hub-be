@@ -8,10 +8,11 @@ class PostsController < ApplicationController
     end
 
     render json: {
-      posts: @posts,
+      posts: @posts.as_json(index: true),
       next_cursor: next_cursor(@posts)
     }
   end
+
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
@@ -30,6 +31,7 @@ class PostsController < ApplicationController
   def post_limit
     (params[:limit] || 10).to_i
   end
+
   def next_cursor(posts)
     return nil if posts.nil? || posts.size < post_limit
 

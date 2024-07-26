@@ -61,6 +61,15 @@ paths:
                     id:
                       type: integer
                       example: 1
+                    user:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 2
+                        full_name:
+                          type: string
+                          example: "example"
                     title:
                       type: string
                       example: "Post Title"

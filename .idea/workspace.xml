@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de81b7f4-da68-4433-baf1-e31562bcbc31" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/socialhub.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/socialhub.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/posts_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/posts_manual_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/requests/users_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/requests/users_manual_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/cors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cors.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger/v1/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger/v1/swagger.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RSpec.Authentication.executor": "Run",
-    "RSpec.Posts.executor": "Run",
-    "Rails.socialhub.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/rie/Repository/interview/belle_and_kate_room/socialhub",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RSpec.Authentication.executor&quot;: &quot;Run&quot;,
+    &quot;RSpec.Posts.executor&quot;: &quot;Run&quot;,
+    &quot;Rails.socialhub.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rie/Repository/interview/belle_and_kate_room/socialhub&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/spec" />
@@ -231,15 +228,7 @@
       <item itemvalue="Rails.socialhub" />
       <item itemvalue="Rake.spec: socialhub" />
       <item itemvalue="Rake.test: socialhub" />
-      <item itemvalue="RSpec.Authentication" />
-      <item itemvalue="RSpec.Posts" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="RSpec.Authentication" />
-        <item itemvalue="RSpec.Posts" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -273,7 +262,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/socialhub@Posts.rcov" NAME="Posts Coverage Results" MODIFIED="1721888476997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="socialhub" />
-    <SUITE FILE_PATH="coverage/socialhub@socialhub.rcov" NAME="socialhub Coverage Results" MODIFIED="1721952464838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="socialhub" />
+    <SUITE FILE_PATH="coverage/socialhub@socialhub.rcov" NAME="socialhub Coverage Results" MODIFIED="1721966921327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="socialhub" />
     <SUITE FILE_PATH="coverage/socialhub@Authentication.rcov" NAME="Authentication Coverage Results" MODIFIED="1721895599162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="socialhub" />
   </component>
 </project>
